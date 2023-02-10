@@ -1,0 +1,4 @@
+//Mandamos a llamar a nuestras carpetas scss
+//En caso de no tener carpetas se utilizaria el @forward en vez de usin
+@use 'base';
+@use 'layout';

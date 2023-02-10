@@ -1,0 +1,66 @@
+@use 'var' as v;
+
+html{
+    font-size: 62.5%; //Genero que 1rem = 10px exactos.
+    box-sizing: border-box; //pluging para que el margin y el padding no afecten al tamaño del contenedor
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit; //Complemento del plugin para el contenedor
+}
+
+body{
+    font-family: v.$principal-font;
+    font-size: 1.6rem;
+    background-color: v.$white;
+    &.body-scroll{
+        //Se añade un padding exactamente del tamaño del header 
+        //para abarcar ese espacio y evitar un salto repentino en el contenido
+        padding-top: 8.6rem;
+    }
+}
+p{
+    font-size: 2rem;
+    color: v.$black;
+    line-height: 1.5;
+}
+
+.container{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3{
+    margin: 0 0 5rem 0;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.6rem;
+}
+h3{
+    font-size: 3rem;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.mirror-img{
+    transform: scaleX(-1);
+}
+.center-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
